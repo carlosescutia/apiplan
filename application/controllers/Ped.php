@@ -15,15 +15,15 @@ class Ped extends RestController {
 
         $data = [
             'message' => 'Api del PED',
-            'Dimensiones' => 'http://plan.test/ped/dimensiones',
-            'Lineas estrategicas' => 'http://plan.test/ped/lineas',
-            'Objetivos' => 'http://plan.test/ped/objetivos',
-            'Estrategias' => 'http://plan.test/ped/estrategias',
-            'Proyectos' => 'http://plan.test/ped/proyectos',
-            'Retos regionales' => 'http://plan.test/ped/retosreg',
-            'Objetivos regionales' => 'http://plan.test/ped/objreg',
-            'Estrategias regionales' => 'http://plan.test/ped/estreg',
-            'Indicadores' => 'http://plan.test/ped/indicadores'
+            'Dimensiones' => base_url().'ped/dimensiones',
+            'Lineas estrategicas' => base_url().'ped/lineas',
+            'Objetivos' => base_url().'ped/objetivos',
+            'Estrategias' => base_url().'ped/estrategias',
+            'Proyectos' => base_url().'ped/proyectos',
+            'Retos regionales' => base_url().'ped/retosreg',
+            'Objetivos regionales' => base_url().'ped/objreg',
+            'Estrategias regionales' => base_url().'ped/estreg',
+            'Indicadores' => base_url().'ped/indicadores'
         ];
         $this->response($data, RestController::HTTP_OK);
 	}
