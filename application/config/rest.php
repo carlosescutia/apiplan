@@ -109,8 +109,9 @@ $config['rest_realm'] = 'REST API';
 | 'session' Check for a PHP session variable. See 'auth_source' to set the
 |           authorization key
 |
-*/
 $config['rest_auth'] = 'basic';
+*/
+$config['rest_auth'] = FALSE;
 
 /*
 |--------------------------------------------------------------------------
