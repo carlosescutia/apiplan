@@ -16,9 +16,10 @@ class Api extends RestController {
 
         $data = [
             'message' => 'Api Planeación',
-            'todos los instrumentos' => 'http://plan.test/api/instrumentos',
-            'instrumento con id=33' => 'http://plan.test/api/instrumentos/33',
-            'datos del instrumento=33' => 'http://plan.test/api/datos/33'
+            'todos los instrumentos' => base_url().'api/instrumentos',
+            'instrumento con id=33' => base_url().'api/instrumentos/33',
+            'datos del instrumento=33' => base_url().'api/datos/33',
+            'PED 2040' => base_url().'ped'
         ];
         $this->response($data, RestController::HTTP_OK);
 	}
