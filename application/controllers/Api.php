@@ -15,10 +15,7 @@ class Api extends RestController {
 	{
 
         $data = [
-            'message' => 'Api Planeación',
-            'todos los instrumentos' => base_url().'api/instrumentos',
-            'instrumento con id=33' => base_url().'api/instrumentos/33',
-            'datos del instrumento=33' => base_url().'api/datos/33',
+            'API' => 'Instrumentos de planeación Iplaneg',
             'PED 2040' => base_url().'ped'
         ];
         $this->response($data, RestController::HTTP_OK);
