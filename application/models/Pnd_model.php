@@ -1,5 +1,5 @@
 <?php
-class Ods_model extends CI_Model {
+class Pnd_model extends CI_Model {
 
     public function __construct() {
         parent::__construct();
@@ -13,7 +13,7 @@ class Ods_model extends CI_Model {
         return $query->result_array();
     }
 
-    public function get_metas() {
+    public function get_ejes() {
         $sql = ''
             .'select '
             .'';

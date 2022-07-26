@@ -48,7 +48,7 @@ class Ped extends RestController {
         } else {
             $this->response( [
                 'status' => false,
-                'message' => 'No se encontraron lineas estrategicas'
+                'message' => 'No se encontraron lineas estratégicas'
             ], RestController::HTTP_NOT_FOUND );
         }
 	}
