@@ -69,37 +69,57 @@ class Ped_model extends CI_Model {
     }
 
     public function get_estrategias() {
-        $sql = 'select registro_nivel_id as id, contenido as dimension from "Registro_Nivel_Campo" where nivel_id = 3 and nivel_campo_id = 9 order by registro_nivel_id;';
+        $sql = ''
+            .'select  '
+            .'';
         $query = $this->db->query($sql);
         return $query->result_array();
     }
 
     public function get_proyectos() {
-        $sql = 'select registro_nivel_id as id, contenido as dimension from "Registro_Nivel_Campo" where nivel_id = 3 and nivel_campo_id = 9 order by registro_nivel_id;';
+        $sql = ''
+            .'select  '
+            .'';
         $query = $this->db->query($sql);
         return $query->result_array();
     }
 
     public function get_retosreg() {
-        $sql = 'select registro_nivel_id as id, contenido as dimension from "Registro_Nivel_Campo" where nivel_id = 3 and nivel_campo_id = 9 order by registro_nivel_id;';
+        $sql = ''
+            .'select  '
+            .'';
         $query = $this->db->query($sql);
         return $query->result_array();
     }
 
     public function get_objreg() {
-        $sql = 'select registro_nivel_id as id, contenido as dimension from "Registro_Nivel_Campo" where nivel_id = 3 and nivel_campo_id = 9 order by registro_nivel_id;';
+        $sql = ''
+            .'select  '
+            .'';
         $query = $this->db->query($sql);
         return $query->result_array();
     }
 
     public function get_estreg() {
-        $sql = 'select registro_nivel_id as id, contenido as dimension from "Registro_Nivel_Campo" where nivel_id = 3 and nivel_campo_id = 9 order by registro_nivel_id;';
+        $sql = ''
+            .'select  '
+            .'';
         $query = $this->db->query($sql);
         return $query->result_array();
     }
 
     public function get_indicadores() {
-        $sql = 'select registro_nivel_id as id, contenido as dimension from "Registro_Nivel_Campo" where nivel_id = 3 and nivel_campo_id = 9 order by registro_nivel_id;';
+        $sql = ''
+            .'select  '
+            .'';
+        $query = $this->db->query($sql);
+        return $query->result_array();
+    }
+
+    public function get_metas() {
+        $sql = ''
+            .'select  '
+            .'';
         $query = $this->db->query($sql);
         return $query->result_array();
     }

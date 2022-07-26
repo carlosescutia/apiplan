@@ -151,4 +151,18 @@ class Ped extends RestController {
         }
 	}
 
+	public function metas_get()
+	{
+        $data = $this->ped_model->get_metas();
+
+        if ($data) {
+            $this->response($data, RestController::HTTP_OK);
+        } else {
+            $this->response( [
+                'status' => false,
+                'message' => 'No se encontraron metas'
+            ], RestController::HTTP_NOT_FOUND );
+        }
+	}
+
 }
