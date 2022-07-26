@@ -16,7 +16,12 @@ class Api extends RestController {
 
         $data = [
             'API' => 'Instrumentos de planeación Iplaneg',
-            'PED 2040' => base_url().'ped'
+            'ODS' => base_url().'ods',
+            'PND' => base_url().'pnd',
+            'PED 2040' => base_url().'ped',
+            'APG-1824' => base_url().'apg',
+            'APS-1924' => base_url().'aps',
+            'PE-1924' => base_url().'pe'
         ];
         $this->response($data, RestController::HTTP_OK);
 	}
