@@ -8,6 +8,7 @@ class Apg_model extends CI_Model {
     public function get_ejes() {
         $sql = ''
 			.'select '
+            .'distinct on (rnc.registro_nivel_id) '
 			.'ide.contenido as id_eje, '
 			.'rnc.contenido as desc_eje  '
 			.'from '
@@ -17,7 +18,7 @@ class Apg_model extends CI_Model {
 			.'rnc.nivel_id = 8 '
 			.'and rnc.nivel_campo_id = 34 '
 			.'order by '
-			.'rnc.registro_nivel_id ; '
+            .'rnc.registro_nivel_id, rnc.version desc '
             .'';
         $query = $this->db->query($sql);
         return $query->result_array();
@@ -26,6 +27,7 @@ class Apg_model extends CI_Model {
     public function get_lineas() {
         $sql = ''
 			.'select '
+            .'distinct on (rnc.registro_nivel_id) '
 			.'ide.contenido as id_eje, '
 			.'idl.contenido as id_linea, '
 			.'rnc.contenido as desc_linea  '
@@ -38,7 +40,7 @@ class Apg_model extends CI_Model {
 			.'rnc.nivel_id = 9 '
 			.'and rnc.nivel_campo_id = 38 '
 			.'order by '
-			.'rnc.registro_nivel_id ; '
+            .'rnc.registro_nivel_id, rnc.version desc '
 			.'';
         $query = $this->db->query($sql);
         return $query->result_array();
