@@ -81,62 +81,6 @@ class Ped extends RestController {
         }
 	}
 
-	public function proyectos_get()
-	{
-        $data = $this->ped_model->get_proyectos();
-
-        if ($data) {
-            $this->response($data, RestController::HTTP_OK);
-        } else {
-            $this->response( [
-                'status' => false,
-                'message' => 'No se encontraron proyectos'
-            ], RestController::HTTP_NOT_FOUND );
-        }
-	}
-
-	public function retosreg_get()
-	{
-        $data = $this->ped_model->get_retosreg();
-
-        if ($data) {
-            $this->response($data, RestController::HTTP_OK);
-        } else {
-            $this->response( [
-                'status' => false,
-                'message' => 'No se encontraron retosreg'
-            ], RestController::HTTP_NOT_FOUND );
-        }
-	}
-
-	public function objreg_get()
-	{
-        $data = $this->ped_model->get_objreg();
-
-        if ($data) {
-            $this->response($data, RestController::HTTP_OK);
-        } else {
-            $this->response( [
-                'status' => false,
-                'message' => 'No se encontraron objreg'
-            ], RestController::HTTP_NOT_FOUND );
-        }
-	}
-
-	public function estreg_get()
-	{
-        $data = $this->ped_model->get_estreg();
-
-        if ($data) {
-            $this->response($data, RestController::HTTP_OK);
-        } else {
-            $this->response( [
-                'status' => false,
-                'message' => 'No se encontraron estreg'
-            ], RestController::HTTP_NOT_FOUND );
-        }
-	}
-
 	public function indicadores_get()
 	{
         $data = $this->ped_model->get_indicadores();

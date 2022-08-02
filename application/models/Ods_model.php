@@ -29,7 +29,7 @@ class Ods_model extends CI_Model {
 			.'distinct on (rnc.registro_nivel_id) '
 			.'ido.contenido as id_objetivo, '
 			.'idm.contenido as id_meta, '
-			.'left(rnc.contenido,60) as desc_meta '
+			.'rnc.contenido as desc_meta '
 			.'from '
 			.'"Registro_Nivel_Campo" rnc  '
 			.'left join "Registro_Nivel_Campo" idno on rnc.registro_nivel_id = idno.registro_nivel_id and idno.nivel_campo_id = 192 '
