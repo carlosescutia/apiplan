@@ -7,7 +7,7 @@ class Api extends RestController {
     {
         parent::__construct();
         $this->load->database();
-        $this->load->model('instrumentos_model');
+        $this->load->model('instrumentos_constructor_model');
         $this->load->model('datos_model');
 	}
 
@@ -30,9 +30,9 @@ class Api extends RestController {
 	{
 
         if(!empty($id)){
-            $data = $this->instrumentos_model->get_instrumento($id);
+            $data = $this->instrumentos_constructor_model->get_instrumento($id);
         }else{
-            $data = $this->instrumentos_model->get_all_instrumentos();
+            $data = $this->instrumentos_constructor_model->get_all_instrumentos_constructor();
         }
 
         if ($data) {

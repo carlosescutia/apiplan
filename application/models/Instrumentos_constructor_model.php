@@ -1,11 +1,11 @@
 <?php
-class Instrumentos_model extends CI_Model {
+class Instrumentos_constructor extends CI_Model {
 
     public function __construct() {
         parent::__construct();
     }
 
-    public function get_all_instrumentos() {
+    public function get_all_instrumentos_constructor() {
         $sql = 'select * from "Nivel" order by id;';
         $query = $this->db->query($sql);
         return $query->result_array();
