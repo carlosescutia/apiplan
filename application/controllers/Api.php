@@ -16,6 +16,7 @@ class Api extends RestController {
 
         $data = [
             'API' => 'Instrumentos de planeación Iplaneg',
+            'Instrumentos de planeación' => base_url().'instrumentos',
             'ODS' => base_url().'ods',
             'PND' => base_url().'pnd',
             'PED 2040' => base_url().'ped',
@@ -26,7 +27,8 @@ class Api extends RestController {
         $this->response($data, RestController::HTTP_OK);
 	}
 
-	public function instrumentos_get($id = 0)
+
+	public function instrumentos_constructor_get($id = 0)
 	{
 
         if(!empty($id)){

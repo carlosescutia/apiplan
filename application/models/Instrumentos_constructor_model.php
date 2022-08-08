@@ -1,5 +1,5 @@
 <?php
-class Instrumentos_constructor extends CI_Model {
+class Instrumentos_constructor_model extends CI_Model {
 
     public function __construct() {
         parent::__construct();
