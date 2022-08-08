@@ -15,10 +15,10 @@ class pe extends RestController {
 
         $data = [
             'Instrumento' => 'PE',
-            'Programas' => base_url().'pe/programas?format=html',
-            'Lineas estratégicas' => base_url().'pe/lineas?format=html',
-            'Objetivos' => base_url().'pe/objetivos?format=html',
-            'Indicadores' => base_url().'pe/indicadores?format=html',
+            'Programas' => base_url().'pe/programas',
+            'Lineas estratégicas' => base_url().'pe/lineas',
+            'Objetivos' => base_url().'pe/objetivos',
+            'Indicadores' => base_url().'pe/indicadores',
         ];
         $this->response($data, RestController::HTTP_OK);
 	}

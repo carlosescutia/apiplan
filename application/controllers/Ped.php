@@ -15,12 +15,12 @@ class Ped extends RestController {
 
         $data = [
             'Instrumento' => 'PED 2040',
-            'Dimensiones' => base_url().'ped/dimensiones?format=html',
-            'Lineas estrategicas' => base_url().'ped/lineas?format=html',
-            'Objetivos' => base_url().'ped/objetivos?format=html',
-            'Estrategias' => base_url().'ped/estrategias?format=html',
-            'Indicadores' => base_url().'ped/indicadores?format=html',
-            'Metas' => base_url().'ped/metas?format=html'
+            'Dimensiones' => base_url().'ped/dimensiones',
+            'Lineas estrategicas' => base_url().'ped/lineas',
+            'Objetivos' => base_url().'ped/objetivos',
+            'Estrategias' => base_url().'ped/estrategias',
+            'Indicadores' => base_url().'ped/indicadores',
+            'Metas' => base_url().'ped/metas'
         ];
         $this->response($data, RestController::HTTP_OK);
 	}

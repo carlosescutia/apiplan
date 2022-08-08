@@ -15,8 +15,8 @@ class Ods extends RestController {
 
         $data = [
             'Instrumento' => 'ODS',
-            'Objetivos' => base_url().'ods/objetivos?format=html',
-            'Metas' => base_url().'ods/metas?format=html'
+            'Objetivos' => base_url().'ods/objetivos',
+            'Metas' => base_url().'ods/metas'
         ];
         $this->response($data, RestController::HTTP_OK);
 	}

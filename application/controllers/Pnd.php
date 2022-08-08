@@ -15,8 +15,8 @@ class Pnd extends RestController {
 
         $data = [
             'Instrumento' => 'PND',
-            'Ejes' => base_url().'pnd/ejes?format=html',
-            'Objetivos' => base_url().'pnd/objetivos?format=html'
+            'Ejes' => base_url().'pnd/ejes',
+            'Objetivos' => base_url().'pnd/objetivos'
         ];
         $this->response($data, RestController::HTTP_OK);
 	}

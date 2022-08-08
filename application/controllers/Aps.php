@@ -15,11 +15,11 @@ class Aps extends RestController {
 
         $data = [
             'Instrumento' => 'APS',
-            'Programas' => base_url().'aps/programas?format=html',
-            'Líneas estratégicas' => base_url().'aps/lineas?format=html',
-            'Objetivos' => base_url().'aps/objetivos?format=html',
-            'Indicadores' => base_url().'aps/indicadores?format=html',
-            'Metas' => base_url().'aps/metas?format=html',
+            'Programas' => base_url().'aps/programas',
+            'Líneas estratégicas' => base_url().'aps/lineas',
+            'Objetivos' => base_url().'aps/objetivos',
+            'Indicadores' => base_url().'aps/indicadores',
+            'Metas' => base_url().'aps/metas',
         ];
         $this->response($data, RestController::HTTP_OK);
 	}

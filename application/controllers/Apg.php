@@ -15,13 +15,13 @@ class Apg extends RestController {
 
         $data = [
             'Instrumento' => 'APG',
-            'Ejes de gobierno' => base_url().'apg/ejes?format=html',
-            'Líneas estratégicas' => base_url().'apg/lineas?format=html',
-            'Objetivos' => base_url().'apg/objetivos?format=html',
-            'Estrategias' => base_url().'apg/estrategias?format=html',
-            'Indicadores' => base_url().'apg/indicadores?format=html',
-            'Metas' => base_url().'apg/metas?format=html',
-            'FTIs' => base_url().'apg/ftis?format=html',
+            'Ejes de gobierno' => base_url().'apg/ejes',
+            'Líneas estratégicas' => base_url().'apg/lineas',
+            'Objetivos' => base_url().'apg/objetivos',
+            'Estrategias' => base_url().'apg/estrategias',
+            'Indicadores' => base_url().'apg/indicadores',
+            'Metas' => base_url().'apg/metas',
+            'FTIs' => base_url().'apg/ftis',
         ];
         $this->response($data, RestController::HTTP_OK);
 	}
