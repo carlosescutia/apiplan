@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'api',
-	'password' => 'api',
-	'database' => 'api',
+	'hostname' => '172.16.2.100',
+	'username' => 'usr-iplaneg',
+	'password' => 'BG4BPbg73GLnl2Xq1zCsNqc',
+	'database' => 'iplaneg',
 	'dbdriver' => 'postgre',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
