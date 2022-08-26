@@ -22,7 +22,8 @@ class Api extends RestController {
             'PED 2040' => base_url().'ped',
             'APG-1824' => base_url().'apg',
             'APS-1924' => base_url().'aps',
-            'PE-1924' => base_url().'pe'
+            'PE-1924' => base_url().'pe',
+            'AT-1824' => base_url().'at',
         ];
         $this->response($data, RestController::HTTP_OK);
 	}
