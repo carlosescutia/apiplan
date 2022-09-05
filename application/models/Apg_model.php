@@ -108,6 +108,40 @@ class Apg_model extends CI_Model {
         return $query->result_array();
     }
 
+    public function get_lineas_accion() {
+        $sql = ''
+            .'select '
+            .'distinct on (rnc.registro_nivel_id) '
+            .'idit.contenido as id_instrumento, '
+            .'ide.contenido as id_eje, '
+            .'idl.contenido as id_linea, '
+            .'ido.contenido as id_objetivo, '
+            .'ides.contenido as id_estrategia, '
+            .'idla.contenido as id_linea_accion, '
+            .'rnc.contenido as desc_linea_accion '
+            .'from '
+            .'"Registro_Nivel_Campo" rnc  '
+            .'left join "Registro_Nivel_Campo" idnit on rnc.registro_nivel_id = idnit.registro_nivel_id and idnit.nivel_campo_id = 300 '
+            .'left join "Registro_Nivel_Campo" idne on rnc.registro_nivel_id = idne.registro_nivel_id and idne.nivel_campo_id = 301 '
+            .'left join "Registro_Nivel_Campo" idnl on rnc.registro_nivel_id = idnl.registro_nivel_id and idnl.nivel_campo_id = 302 '
+            .'left join "Registro_Nivel_Campo" idno on rnc.registro_nivel_id = idno.registro_nivel_id and idno.nivel_campo_id = 303 '
+            .'left join "Registro_Nivel_Campo" idnes on rnc.registro_nivel_id = idnes.registro_nivel_id and idnes.nivel_campo_id = 304 '
+            .'left join "Registro_Nivel_Campo" idit on idnit.contenido::int = idit.registro_nivel_id and idit.nivel_id = 2 and idit.nivel_campo_id = 5 '
+            .'left join "Registro_Nivel_Campo" ide on idne.contenido::int = ide.registro_nivel_id and ide.nivel_id = 8 and ide.nivel_campo_id = 33 '
+            .'left join "Registro_Nivel_Campo" idl on idnl.contenido::int = idl.registro_nivel_id and idl.nivel_id = 9 and idl. nivel_campo_id = 37 '
+            .'left join "Registro_Nivel_Campo" ido on idno.contenido::int = ido.registro_nivel_id and ido.nivel_id = 10 and ido.nivel_campo_id = 42 '
+            .'left join "Registro_Nivel_Campo" ides on idnes.contenido::int = ides.registro_nivel_id and ides.nivel_id = 18 and ides.nivel_campo_id = 85 '
+            .'left join "Registro_Nivel_Campo" idla on rnc.registro_nivel_id = idla.registro_nivel_id and idla.nivel_campo_id = 305 '
+            .'where  '
+            .'rnc.nivel_id = 55 '
+            .'and rnc.nivel_campo_id = 306 '
+            .'order by '
+            .'rnc.registro_nivel_id, rnc.version desc '
+            .'';
+        $query = $this->db->query($sql);
+        return $query->result_array();
+    }
+
     public function get_indicadores() {
         $sql = ''
             .'select '

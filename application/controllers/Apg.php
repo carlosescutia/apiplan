@@ -19,6 +19,7 @@ class Apg extends RestController {
             'Líneas estratégicas' => base_url().'apg/lineas',
             'Objetivos' => base_url().'apg/objetivos',
             'Estrategias' => base_url().'apg/estrategias',
+            'Lineas de acción' => base_url().'apg/lineas_accion',
             'Indicadores' => base_url().'apg/indicadores',
             'Metas' => base_url().'apg/metas',
             'FTIs' => base_url().'apg/ftis',
@@ -78,6 +79,20 @@ class Apg extends RestController {
             $this->response( [
                 'status' => false,
                 'message' => 'No se encontraron estrategias'
+            ], RestController::HTTP_NOT_FOUND );
+        }
+	}
+
+	public function lineas_accion_get()
+	{
+        $data = $this->apg_model->get_lineas_accion();
+
+        if ($data) {
+            $this->response($data, RestController::HTTP_OK);
+        } else {
+            $this->response( [
+                'status' => false,
+                'message' => 'No se encontraron líneas de acción'
             ], RestController::HTTP_NOT_FOUND );
         }
 	}
