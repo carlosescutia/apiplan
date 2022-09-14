@@ -18,6 +18,8 @@ class pe extends RestController {
             'Programas' => base_url().'pe/programas',
             'Lineas estratégicas' => base_url().'pe/lineas',
             'Objetivos' => base_url().'pe/objetivos',
+            'Líneas de acción' => base_url().'pe/lineas_accion',
+            'Estrategias' => base_url().'pe/estrategias',
             'Indicadores' => base_url().'pe/indicadores',
         ];
         $this->response($data, RestController::HTTP_OK);
@@ -61,6 +63,34 @@ class pe extends RestController {
             $this->response( [
                 'status' => false,
                 'message' => 'No se encontraron objetivos'
+            ], RestController::HTTP_NOT_FOUND );
+        }
+	}
+
+	public function lineas_accion_get()
+	{
+        $data = $this->pe_model->get_lineas_accion();
+
+        if ($data) {
+            $this->response($data, RestController::HTTP_OK);
+        } else {
+            $this->response( [
+                'status' => false,
+                'message' => 'No se encontraron líneas de acción'
+            ], RestController::HTTP_NOT_FOUND );
+        }
+	}
+
+	public function estrategias_get()
+	{
+        $data = $this->pe_model->get_estrategias();
+
+        if ($data) {
+            $this->response($data, RestController::HTTP_OK);
+        } else {
+            $this->response( [
+                'status' => false,
+                'message' => 'No se encontraron estrategias'
             ], RestController::HTTP_NOT_FOUND );
         }
 	}

@@ -80,6 +80,37 @@ class Aps_model extends CI_Model {
         return $query->result_array();
     }
 
+    public function get_lineas_accion() {
+        $sql = ''
+            .'select '
+            .'distinct on (rnc.registro_nivel_id) '
+            .'idit.contenido as id_instrumento, '
+            .'idp.contenido as id_programa, '
+            .'idl.contenido as id_linea, '
+            .'ido.contenido as id_objetivo, '
+            .'idla.contenido as id_linea_accion, '
+            .'rnc.contenido as desc_linea_accion '
+            .'from '
+            .'"Registro_Nivel_Campo" rnc  '
+            .'left join "Registro_Nivel_Campo" idnit on rnc.registro_nivel_id = idnit.registro_nivel_id and idnit.nivel_campo_id = 325 '
+            .'left join "Registro_Nivel_Campo" idnp on rnc.registro_nivel_id = idnp.registro_nivel_id and idnp.nivel_campo_id = 326 '
+            .'left join "Registro_Nivel_Campo" idnl on rnc.registro_nivel_id = idnl.registro_nivel_id and idnl.nivel_campo_id = 327 '
+            .'left join "Registro_Nivel_Campo" idno on rnc.registro_nivel_id = idno.registro_nivel_id and idno.nivel_campo_id = 328 '
+            .'left join "Registro_Nivel_Campo" idit on idnit.contenido::int = idit.registro_nivel_id and idit.nivel_id = 2 and idit.nivel_campo_id = 5 '
+            .'left join "Registro_Nivel_Campo" idp on idnp.contenido::int = idp.registro_nivel_id and idp.nivel_id = 13 and idp.nivel_campo_id = 58 '
+            .'left join "Registro_Nivel_Campo" idl on idnl.contenido::int = idl.registro_nivel_id and idl.nivel_id = 14 and idl.nivel_campo_id = 62 '
+            .'left join "Registro_Nivel_Campo" ido on idno.contenido::int = ido.registro_nivel_id and ido.nivel_id = 15 and ido.nivel_campo_id = 67 '
+            .'left join "Registro_Nivel_Campo" idla on rnc.registro_nivel_id = idla.registro_nivel_id and idla.nivel_campo_id = 329 '
+            .'where  '
+            .'rnc.nivel_id = 59 '
+            .'and rnc.nivel_campo_id = 330 '
+            .'order by '
+            .'rnc.registro_nivel_id, rnc.version desc '
+            .'';
+        $query = $this->db->query($sql);
+        return $query->result_array();
+    }
+
     public function get_indicadores() {
         $sql = ''
             .'select '

@@ -18,6 +18,7 @@ class Aps extends RestController {
             'Programas' => base_url().'aps/programas',
             'Líneas estratégicas' => base_url().'aps/lineas',
             'Objetivos' => base_url().'aps/objetivos',
+            'Líneas de acción' => base_url().'aps/lineas_accion',
             'Indicadores' => base_url().'aps/indicadores',
             'Metas' => base_url().'aps/metas',
         ];
@@ -62,6 +63,20 @@ class Aps extends RestController {
             $this->response( [
                 'status' => false,
                 'message' => 'No se encontraron objetivos'
+            ], RestController::HTTP_NOT_FOUND );
+        }
+	}
+
+	public function lineas_accion_get()
+	{
+        $data = $this->aps_model->get_lineas_accion();
+
+        if ($data) {
+            $this->response($data, RestController::HTTP_OK);
+        } else {
+            $this->response( [
+                'status' => false,
+                'message' => 'No se encontraron líneas de acción'
             ], RestController::HTTP_NOT_FOUND );
         }
 	}
