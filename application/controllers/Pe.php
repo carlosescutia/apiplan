@@ -18,8 +18,8 @@ class pe extends RestController {
             'Programas' => base_url().'pe/programas',
             'Lineas estratégicas' => base_url().'pe/lineas',
             'Objetivos' => base_url().'pe/objetivos',
-            'Líneas de acción' => base_url().'pe/lineas_accion',
             'Estrategias' => base_url().'pe/estrategias',
+            'Líneas de acción' => base_url().'pe/lineas_accion',
             'Indicadores' => base_url().'pe/indicadores',
         ];
         $this->response($data, RestController::HTTP_OK);
